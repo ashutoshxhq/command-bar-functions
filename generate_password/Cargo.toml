@@ -1,0 +1,18 @@
+[package]
+name = "generate_password"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+libc = "0.2.125"
+serde = { version = "1.0.137", features = ["derive"] }
+serde_json = "1.0.81"
+egnitely-client = { git="https://github.com/egnitely/egnitely-client-lib.git", version="0.1.0" }
+tokio = {version = "1.18.2", features = ["full"]}
+passwords = {version = "3.1.9", features = ["crypto"]}
+clipboard = "0.5.0"

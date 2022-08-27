@@ -19,7 +19,7 @@ egnitely_fn!(generate_password);
 
 async fn generate_password(input:Value) -> Value {
 
-    print!("Reciedved Data: {:?}",input.clone());
+    print!("Received Data: {:?}",input.clone());
     let data:PasswordGeneratorParams = serde_json::from_value(input["data"].clone()).unwrap();
     let len = usize::try_from(data.length).unwrap();
     
